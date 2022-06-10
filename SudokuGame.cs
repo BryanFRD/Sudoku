@@ -1,13 +1,13 @@
 namespace Sudoku {
     
-    public class SodokuGame {
+    public class SudokuGame {
         
         private const int TOTAL_SUDOKU = 405;
         private int total = 0;
         
         private int[,] gameArray;
         
-        public SodokuGame(int[,] gameArray){
+        public SudokuGame(int[,] gameArray){
             this.gameArray = gameArray;
         }
         
@@ -20,6 +20,10 @@ namespace Sudoku {
             total += gameArray[x, y] + value;
             
             gameArray[x, y] = value;
+        }
+        
+        public int GetValue(int x, int y){
+            return gameArray[x, y];
         }
         
         public bool HasWon(){
