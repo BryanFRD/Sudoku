@@ -3,7 +3,7 @@ namespace Sudoku {
     public class SudokuGame {
         
         private const int TOTAL_SUDOKU = 405;
-        private int total;
+        private int total = 0;
         
         private SudokuGenerator sudokuGenerator;
         private int[,] gameArray;
@@ -11,9 +11,11 @@ namespace Sudoku {
         public SudokuGame(SudokuGenerator sudokuGenerator){
             this.sudokuGenerator = sudokuGenerator;
             
-            total = sudokuGenerator.GetTotal();
-            
             this.gameArray = sudokuGenerator.GetGameArray();
+            
+            foreach(int i in gameArray){
+                total += i;
+            }
         }
         
         public void SetValue(int x, int y, int value){

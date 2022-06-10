@@ -3,18 +3,27 @@ namespace Sudoku{
     public class SudokuGenerator {
         
         private SudokuDifficulty difficulty;
-        int total = 0;
         private int[,] generatedGameArray;
         
         public SudokuGenerator(SudokuDifficulty difficulty){
             this.difficulty = difficulty;
             
-            if(difficulty == SudokuDifficulty.TEST){
-                generatedGameArray = GenerateTestArray();
-                total = 405 - 9 - 4 - 3;
-            } else {
+            switch (difficulty){
+                case SudokuDifficulty.EASY:
+                GenerateEasyArray();
+                break;
+                case SudokuDifficulty.HARD:
+                GenerateHardArray();
+                break;
+                case SudokuDifficulty.TEST:
+                GenerateTestArray();
+                break;
+                case SudokuDifficulty.NORMAL:
+                GenerateNormalArray();
+                break;
+                default:
                 generatedGameArray = new int[9, 9];
-                total = 0;
+                break;
             }
         }
         
@@ -22,8 +31,20 @@ namespace Sudoku{
             return generatedGameArray;
         }
         
-        private int[,] GenerateTestArray(){
-            return new int[,]{
+        private void GenerateEasyArray(){
+            generatedGameArray = new int[9, 9];
+        }
+        
+        private void GenerateNormalArray(){
+            generatedGameArray = new int[9, 9];
+        }
+        
+        private void GenerateHardArray(){
+            generatedGameArray = new int[9, 9];
+        }
+        
+        private void GenerateTestArray(){
+            generatedGameArray = new int[9, 9]{
                 {0, 0, 6, 2, 5, 7, 8, 3, 1},
                 {0, 1, 5, 9, 8, 4, 6, 7, 2},
                 {2, 7, 8, 6, 1, 3, 5, 4, 9},
@@ -38,10 +59,6 @@ namespace Sudoku{
         
         public SudokuDifficulty GetDifficulty(){
             return difficulty;
-        }
-        
-        public int GetTotal(){
-            return total;
         }
         
     }
