@@ -7,7 +7,7 @@
         private static Regex regex = new Regex(@"([a-zA-Z])(\d)\s(\d)");
         
         static void Main(){
-            sudokuGame = new SudokuGame(new SudokuGenerator(SudokuDifficulty.NORMAL).GetGameArray());
+            sudokuGame = new SudokuGame(new SudokuGenerator(SudokuDifficulty.TEST));
             
             AskToPlay();
         }
@@ -50,7 +50,6 @@
         private static Match AskPlayerInput(){
             Write("Entrez vos coordonnées et la valeur : (A5 2) ");
             string userInput = Console.ReadLine();
-            WriteLine("" + regex.IsMatch(userInput));
             if(!string.IsNullOrWhiteSpace(userInput) && regex.IsMatch(userInput)){
                 return regex.Match(userInput);
             }
@@ -93,14 +92,14 @@
             }
         }
         
-        private static void Write(String text, ConsoleColor foreground = ConsoleColor.Gray, ConsoleColor background = ConsoleColor.Black){
+        public static void Write(String text, ConsoleColor foreground = ConsoleColor.Gray, ConsoleColor background = ConsoleColor.Black){
             Console.ForegroundColor = foreground;
             Console.BackgroundColor = background;
             Console.Write(text);
             Console.ResetColor();
         }
         
-        private static void WriteLine(String text, ConsoleColor foreground = ConsoleColor.Gray, ConsoleColor background = ConsoleColor.Black){
+        public static void WriteLine(String text, ConsoleColor foreground = ConsoleColor.Gray, ConsoleColor background = ConsoleColor.Black){
             Console.ForegroundColor = foreground;
             Console.BackgroundColor = background;
             Console.WriteLine(text);

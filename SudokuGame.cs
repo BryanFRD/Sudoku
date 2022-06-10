@@ -3,12 +3,17 @@ namespace Sudoku {
     public class SudokuGame {
         
         private const int TOTAL_SUDOKU = 405;
-        private int total = 0;
+        private int total;
         
+        private SudokuGenerator sudokuGenerator;
         private int[,] gameArray;
         
-        public SudokuGame(int[,] gameArray){
-            this.gameArray = gameArray;
+        public SudokuGame(SudokuGenerator sudokuGenerator){
+            this.sudokuGenerator = sudokuGenerator;
+            
+            total = sudokuGenerator.GetTotal();
+            
+            this.gameArray = sudokuGenerator.GetGameArray();
         }
         
         public void SetValue(int x, int y, int value){
@@ -17,7 +22,8 @@ namespace Sudoku {
             }
             value = value >= 9 ? 9 : value <= 0 ? 0 : value;
             
-            total += gameArray[x, y] + value;
+            total -= gameArray[x, y];
+            total += value;
             
             gameArray[x, y] = value;
         }
@@ -36,6 +42,8 @@ namespace Sudoku {
                     return false;
                 }
             }
+            
+            Program.WriteLine($"Total: {total} - {total==TOTAL_SUDOKU}", ConsoleColor.DarkYellow);
             
             return total == TOTAL_SUDOKU;
         }
@@ -61,11 +69,11 @@ namespace Sudoku {
                 }
             }
             
-            for(int i = 0; i <= 9; i += 3){
-                for(int j = 0; j <= 9; j += 3){
+            for(int i = 0; i < 9; i += 3){
+                for(int j = 0; j < 9; j += 3){
                     int[] tempArray = new int[9];
                     for(int x = 0; x < 3; x++){
-                        for(int y = 0; y < 3; i++){
+                        for(int y = 0; y < 3; y++){
                             if(tempArray.Contains(gameArray[x + i, y + j])){
                                 return false;
                             }
@@ -76,6 +84,10 @@ namespace Sudoku {
             }
             
             return true;
+        }
+        
+        public SudokuDifficulty GetDifficulty(){
+            return sudokuGenerator.GetDifficulty();
         }
         
     }
