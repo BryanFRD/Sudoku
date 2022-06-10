@@ -1,0 +1,15 @@
+C:\Users\MrZin\Documents\Perso\WorkSpace\Sudoku-CSharp\bin\Debug\net6.0\Sudoku-CSharp.exe
+C:\Users\MrZin\Documents\Perso\WorkSpace\Sudoku-CSharp\bin\Debug\net6.0\Sudoku-CSharp.deps.json
+C:\Users\MrZin\Documents\Perso\WorkSpace\Sudoku-CSharp\bin\Debug\net6.0\Sudoku-CSharp.runtimeconfig.json
+C:\Users\MrZin\Documents\Perso\WorkSpace\Sudoku-CSharp\bin\Debug\net6.0\Sudoku-CSharp.dll
+C:\Users\MrZin\Documents\Perso\WorkSpace\Sudoku-CSharp\bin\Debug\net6.0\Sudoku-CSharp.pdb
+C:\Users\MrZin\Documents\Perso\WorkSpace\Sudoku-CSharp\obj\Debug\net6.0\Sudoku-CSharp.csproj.AssemblyReference.cache
+C:\Users\MrZin\Documents\Perso\WorkSpace\Sudoku-CSharp\obj\Debug\net6.0\Sudoku-CSharp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MrZin\Documents\Perso\WorkSpace\Sudoku-CSharp\obj\Debug\net6.0\Sudoku-CSharp.AssemblyInfoInputs.cache
+C:\Users\MrZin\Documents\Perso\WorkSpace\Sudoku-CSharp\obj\Debug\net6.0\Sudoku-CSharp.AssemblyInfo.cs
+C:\Users\MrZin\Documents\Perso\WorkSpace\Sudoku-CSharp\obj\Debug\net6.0\Sudoku-CSharp.csproj.CoreCompileInputs.cache
+C:\Users\MrZin\Documents\Perso\WorkSpace\Sudoku-CSharp\obj\Debug\net6.0\Sudoku-CSharp.dll
+C:\Users\MrZin\Documents\Perso\WorkSpace\Sudoku-CSharp\obj\Debug\net6.0\refint\Sudoku-CSharp.dll
+C:\Users\MrZin\Documents\Perso\WorkSpace\Sudoku-CSharp\obj\Debug\net6.0\Sudoku-CSharp.pdb
+C:\Users\MrZin\Documents\Perso\WorkSpace\Sudoku-CSharp\obj\Debug\net6.0\Sudoku-CSharp.genruntimeconfig.cache
+C:\Users\MrZin\Documents\Perso\WorkSpace\Sudoku-CSharp\obj\Debug\net6.0\ref\Sudoku-CSharp.dll
