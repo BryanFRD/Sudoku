@@ -43,8 +43,6 @@ namespace Sudoku {
                 }
             }
             
-            Program.WriteLine($"Total: {total} - {total==TOTAL_SUDOKU}", ConsoleColor.DarkYellow);
-            
             return total == TOTAL_SUDOKU;
         }
         

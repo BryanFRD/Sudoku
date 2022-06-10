@@ -7,7 +7,7 @@
         private static Regex regex = new Regex(@"([a-zA-Z])(\d)\s(\d)");
         
         static void Main(){
-            sudokuGame = new SudokuGame(new SudokuGenerator(SudokuDifficulty.TEST));
+            sudokuGame = new SudokuGame(new SudokuGenerator(SudokuDifficulty.NORMAL));
             
             AskToPlay();
         }
